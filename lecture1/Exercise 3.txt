@@ -1,0 +1,11 @@
+
+Write a pseudocode of an algorithm to reverse an array of numbers, i.e., the last element should
+become the first, the second last should become the second, etc. 
+
+For example, the reverse of [1, 2, 3, 4] is [4, 3, 2, 1].
+
+(a) What is the worst-case running time of your algorithm?
+
+
+(b) Try now to propose an algorithm that use only a constant amount of extra space. What is the
+worst-case running time of your algorithm?3) 

@@ -1,0 +1,22 @@
+Input: Sequence of at least 2 real numbers
+Output: min1 = least element and min2 = 2'nd least element
+                                      (THIS IS FOR WORST-CASE SCENARIO)
+findTwoLeast(A)                                 cost     times
+min1 = A[1]                                     c_1        1                           
+min2 = A[2]                                     c_2        1
+
+if min2 < min1                                  c_3        1
+    min1 = A[2]                                 c_4        1
+    min2 = A[1]                                 c_5        1
+
+for i = 1 to A.length                           c_6      n + 1
+    if A[i] < min1                              c_7        n
+        min2 = min1                             c_8        n
+        min1 = A[i]                             c_9        n
+    else if A[i] < min2                         c_10       0
+        min2 = a[i]                             c_11       0
+return min1 min2                                c_12       1
+
+(c1 + c2 + c3 + c4 + c5) + c6(n+1) + c7n + c8n + c9n + c12
+(c1 + c2 + c3 + c4 + c5) + c6n + c6 + c7n + c8n + c9n + c12
+(c6 + c7 + c8 + c9)n + (c1 + c2 + c3 + c4 + c5 + c6 + c12) -> It is linear
