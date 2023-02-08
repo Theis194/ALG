@@ -1,0 +1,27 @@
+Exercise 2.
+Consider the following pseudocode for the function Find-Element takes as input an array A[1 . . n] and 
+a number a.
+
+Find-Element(A, a)
+
+for i = 1 to A.length 
+    if A[i] = a
+        return i 
+return i
+
+(a) Count the number of iterations of the for loop in the above pseudocode for the execution of 
+Find-Element([1, 0, 5, 2, 4], 5) and report the value returned at the end of the call.
+-   The for-loop returns the value i = 3 -> So the number of iterations is also 3
+
+(b) Is the above algorithm solving the element search problem presented in class? 
+Justify your answer.
+
+We check termination if the number is not in the list:
+If a is not occuring in the sequence of elements in A.lenght it will 
+return the lenght of the A.length + 1 and therefore returns an incorrect 
+number that might not be in the list.
+Hence it does not solve the problem addressed in the class.
+
+The for-loop 
+
+

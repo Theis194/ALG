@@ -1,0 +1,28 @@
+
+Write a pseudocode of an algorithm to reverse an array of numbers, i.e., the last element should
+become the first, the second last should become the second, etc. 
+
+For example, the reverse of [1, 2, 3, 4] is [4, 3, 2, 1].
+
+
+ReverseArray(A)                                     Name    Cost
+array_length = A.length                             c_1       1
+if (A.length % 2 = 1) {                             c_2       1
+    floor(array_length/2)                           c_3       1    
+}                                                  
+
+for i = 1 to (array_length / 2)                     c_4       n / 2 + 1
+    temp = A[i];                                    c_5       n / 2
+    A[i] = A[A.length - i + 1];                     c_6       n / 2
+    A[A.length - i + 1] = temp;                     c_7       n / 2
+return A;                                           c_8       1
+
+(a) What is the worst-case running time of your algorithm?
+
+(c_1 + c_2 + c_3 + c_8) + c4(n / 2 + 1) + n / 2(c5 + c6 + c7)
+n / 2(c_4 + c5 + c6 + c7) + (c_1 + c_2 + c_3 + c_8 + c_4) -> Still linear
+ 
+(b) Try now to propose an algorithm that use only a constant amount of extra space. What is the
+worst-case running time of your algorithm?
+
+array.reverse();
